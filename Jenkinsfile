@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven 3.9.9' // Adjust this to the Maven version installed on your Jenkins server
+        maven 'Maven' // Adjust this to the Maven version installed on your Jenkins server
     }
     stages {
         stage('Checkout') {
