@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: task3
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:  # Leave empty for password
+  flyway:
+    enabled: true
+    locations: classpath:db/migration/h2
+custom:
+  name: ${DEVOPS:default-devops-value}
