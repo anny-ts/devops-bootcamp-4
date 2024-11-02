@@ -5,6 +5,11 @@ pipeline {
         jdk 'jdk21'
     }
     stages {
+        stage('Test') {
+            steps {
+                echo 'Test!!!'
+            }
+        }
         stage('Verify Java') {
             steps {
 //                 sh '/var/jenkins_home/tools/hudson.model.JDK/temurinjdk-21/jdk-21.0.5+11/bin/java -version'
