@@ -19,7 +19,21 @@ pipeline {
             }
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn clean package'
+            }
+        }
+
+        stage('Checkstyle') {
+            steps {
+                sh 'mvn validate'
+            }
+        }
+    }
+    post {
+        always {
+            recordIssues {
+                enabledForFailure: true, aggregatingResults: true
+                tools: [java(), checkStyle(pattern: 'checkstyle-result.xml', reportEncoding: 'UTF-8')]
             }
         }
     }
