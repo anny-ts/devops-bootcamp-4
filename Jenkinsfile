@@ -5,6 +5,11 @@ pipeline {
         jdk 'temurinjdk-21'
     }
     stages {
+        stage('Verify Java') {
+            steps {
+                sh '/var/jenkins_home/tools/hudson.model.JDK/temurinjdk-21/jdk-21.0.5+11/bin/java -version'
+            }
+        }
         stage('Checkout') {
                 steps {
                     // Checkout code from the SCM configured in Jenkins
