@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'Maven' // Adjust this to the Maven version installed on your Jenkins server
-        jdk 'temurinjdk-21'
+//         jdk 'temurinjdk-21'
     }
     stages {
         stage('Verify Java') {
