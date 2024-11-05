@@ -27,7 +27,7 @@ public class ApiController {
 
     @GetMapping(path = "/hello")
     public String hello() {
-        return "Hello " + customName;
+        return "Hello, " + customName + "!";
     }
 
     @GetMapping("/users")
